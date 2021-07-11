@@ -6,7 +6,7 @@
 1. git clone https://github.com/jordanlogroniohello/taravel.git.
 2. composer install.
 3. npm install.
-4. (OPTIONAL) rename env.example to env (for some reason, the env file automatically changing after push to github).
+4. (OPTIONAL) rename env.example to env (for some reason, the env file automatically changing after push/pull to/from github).
 5. php artisan key:generate.
 6. php artisan serve.
 
