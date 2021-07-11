@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    font-family: 'Nunito' !important;
+}
+  
+
+.app-logo {
+    width: 130px;
+}
+
+/* .app-navbar {
+    z-index: 999;
+    background: rgb(0 0 0 / 45%);
+} */
+
+.app-home-img-background {
+  
+    min-height: 500px;
+    background-image: url(/images/Japan.jpg);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.app-home-img-background-text-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0 0 0 / 40%);
+    color: white;
+    font-size: 70px;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+footer {
+    
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 20px;
+    color: white;
+    background: #202832;
+    margin-top: 220px;
+}
