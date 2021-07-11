@@ -1,0 +1,10 @@
+SELECT 
+CONCAT("T",LPAD(trn_teacher.`id`, 10, '0')) AS ID, 
+trn_teacher.`Nickname`, 
+GROUP_CONCAT(DISTINCT(CASE WHEN trn_teacher.`status` = 0 THEN "DISCONTINUED" WHEN trn_teacher.`status` = 1 THEN "ACTIVE" ELSE "DEACTIVATED" END) SEPARATOR '/')  AS `Status`,
+GROUP_CONCAT(DISTINCT(CASE WHEN trn_teacher_role.`role` = 1 THEN "TRAINER" WHEN trn_teacher_role.`role` = 2 THEN "ASSESOR" ELSE "STAFF" END) SEPARATOR '/') AS `Role`
+FROM trn_teacher
+INNER JOIN 
+trn_teacher_role
+ON  
+trn_teacher.`id` = trn_teacher_role.`teacher_id`  GROUP BY trn_teacher.id ;

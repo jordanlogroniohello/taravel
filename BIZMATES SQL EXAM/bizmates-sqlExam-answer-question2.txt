@@ -1,0 +1,16 @@
+SELECT 
+trn_teacher.`id`,
+trn_teacher.`Nickname`,
+(SELECT sum(trn_time_table.`status`=1) FROM trn_time_table WHERE trn_time_table.`teacher_id`  = trn_teacher.`id`) AS `Open`,
+(SELECT sum(trn_time_table.`status`=3) FROM trn_time_table WHERE trn_time_table.`teacher_id`  = trn_teacher.`id`) AS `Reserved`,
+(SELECT SUM(trn_evaluation.`result` = 1) FROM trn_evaluation WHERE trn_evaluation.`teacher_id`  = trn_teacher.`id`) AS `Taught`,
+(SELECT sum(trn_evaluation.`result` = 2) FROM trn_evaluation WHERE trn_evaluation.`teacher_id`  = trn_teacher.`id`) AS `No Show`
+FROM trn_teacher
+INNER JOIN trn_teacher_role ON  
+ trn_teacher_role.`teacher_id`  = trn_teacher.`id` 
+INNER JOIN trn_time_table ON
+ trn_time_table.`teacher_id` = trn_teacher.`id`
+INNER JOIN trn_evaluation ON
+trn_teacher.`id` = trn_evaluation.`teacher_id`
+WHERE trn_teacher.status = 1 AND ( trn_teacher_role.role = 1 OR  trn_teacher_role.role = 2)
+GROUP BY trn_teacher.id ;
