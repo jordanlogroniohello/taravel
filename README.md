@@ -4,11 +4,12 @@
 
 ## INSTRUCTION TO RUN
 1. git clone https://github.com/jordanlogroniohello/taravel.git.
-2. composer install.
-3. npm install.
-4. (OPTIONAL) rename env.example to env (for some reason, the env file automatically changing after push/pull to/from github).
-5. php artisan key:generate.
-6. php artisan serve.
+2. cd taravel.
+3. composer install.
+4. npm install.
+5. (OPTIONAL) rename env.example to env (for some reason, the env file automatically changing after push/pull to/from github).
+6. php artisan key:generate.
+7. php artisan serve.
 
 ## Explanation on why your UI and UX implementation and code implementation is the best.
 
