@@ -10,6 +10,16 @@
 5. php artisan key:generate.
 6. php artisan serve.
 
+## Explanation on why your UI and UX implementation and code implementation is the best.
+
+About on UI and UX I use this layout because its very plain and simple it helps user to read the content easily by just scrolling down the page. I use dropdown menu to the locations of japan so that user can easily choose what place they want to check, I know that the site that I made need more improvement thats why i made some recomendations. 
+
+recommendation:
+- maps on every destination and pin and every venues availaible
+- search bar for dynamic search.
+
+and about on coding, i would say my code is the best because i implement all the instruction and the coding guidlines.
+
 
 ## PART 2 - SQL EXAM
 SQL ANSWER LOCATED AT "BIZMATES SQL EXAM FOLDER" (https://github.com/jordanlogroniohello/taravel/tree/main/BIZMATES%20SQL%20EXAM)
